@@ -12,8 +12,40 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: "Portfólio",
-  description: "Portfólio pessoal de Kauã Cavalcante.",
+  title: {
+    default: "Kauã Cavalcante | Desenvolvedor Full Stack",
+    template: "%s | Kauã Cavalcante"
+  },
+  description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful. Criando soluções escaláveis, seguras e modernas.",
+  keywords: ["desenvolvedor", "full stack", "django", "next.js", "react", "python", "portfolio"],
+  authors: [{ name: "Kauã Cavalcante" }],
+  creator: "Kauã Cavalcante",
+  openGraph: {
+    type: "website",
+    locale: "pt_BR",
+    url: "https://kauacavalcante.vercel.app",
+    siteName: "Kauã Cavalcante",
+    title: "Kauã Cavalcante | Desenvolvedor Full Stack",
+    description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful.",
+    images: [
+      {
+        url: "/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Kauã Cavalcante - Desenvolvedor Full Stack",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kauã Cavalcante | Desenvolvedor Full Stack",
+    description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful.",
+    images: ["/images/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>) {

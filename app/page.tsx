@@ -155,7 +155,7 @@ export default function Home() {
                     ))}
                 </div>
                 <div className="mt-16 text-center">
-                    <a href="https://github.com/eukauacavalcante?tab=repositories" target="_blank" className="inline-flex items-center gap-2 text-foreground border-b border-foreground pb-1 hover:text-chart-1 hover:border-chart-1 transition-all group" aria-label="Explorar mais no Github" title="Explorar mais no Github">
+                    <a href="https://github.com/eukauacavalcante?tab=repositories" target="_blank" className="inline-flex items-center gap-2 text-foreground border-b border-foreground pb-1 hover:text-chart-1 hover:border-chart-1 transition-all group" aria-label="Explorar mais no Github" title="Explorar mais no Github" rel="noopener noreferrer">
                         Explorar mais no Github <i className="bi bi-arrow-right group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
