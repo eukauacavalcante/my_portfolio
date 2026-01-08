@@ -66,7 +66,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
         )}
 
         {!project.image && project.icon && (
-          <div className="max-w-3xl mx-auto h-64 md:h-96 rounded-xl bg-gradient-to-br from-secondary to-background flex items-center justify-center border border-border rounded-xl mb-8">
+          <div className="max-w-3xl mx-auto h-64 md:h-96 rounded-xl bg-gradient-to-br from-secondary/20 to-background flex items-center justify-center border border-border rounded-xl mb-8">
             <i className={`${project.icon} text-8xl`}></i>
           </div>
         )}
@@ -83,7 +83,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
           ))}
         </div>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap gap-4 mb-12">
           {project.github && project.github !== "#" && (
             <PageButton href={project.github} ariaLabel="Ver no GitHub" title="Ver no GitHub">
                 <i className="bi bi-github mr-2"></i>
@@ -99,21 +99,31 @@ export default async function DetailPage({ params }: DetailPageProps) {
           )}
         </div>
 
-        {project.functionalities && Object.keys(project.functionalities).length > 0 && (
+        {project.functionalities && project.functionalities.length > 0 && (
           <div className="mt-12">
             <div className="mb-8">
               <h2 className="text-3xl font-bold mb-4">Principais Funcionalidades</h2>
               <p className="text-muted-foreground">Ferramentas poderosas para monitoramento e análise.</p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
-              {Object.entries(project.functionalities).map(([feature, desc]) => (
-                <FadeIn delay={0.2} key={feature} className="h-full">
-                  <div className="group h-full p-6 bg-primary/[0.07] border border-primary/5 rounded-xl hover:border-chart-1 hover:bg-primary/10 transition-all duration-300 flex flex-col">
-                    <h3 className="text-sm md:text-lg font-bold mb-2 group-hover:text-chart-1">{feature}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed flex-grow">{desc}</p>
-                  </div>
-                </FadeIn>
-              ))}
+            <div className="grid md:grid-cols-3 gap-6 auto-rows-fr">
+              {project.functionalities.map((func, index) => {
+                const icon = func.icon
+                const entries = Object.entries(func).filter(([key]) => key !== "icon")
+                const [feature, desc] = entries[0] || ["", ""]
+                return (
+                  <FadeIn delay={0.1 * index} key={feature} className="h-full">
+                    <div className="group h-full p-6 bg-primary/[0.07] border border-primary/5 rounded-xl hover:border-chart-1 hover:bg-primary/10 transition-all duration-300 flex flex-col">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="w-10 h-10 rounded-lg bg-chart-1/10 flex items-center justify-center group-hover:bg-chart-1/20 transition-colors">
+                          <i className={`${icon} text-chart-1 text-lg`}></i>
+                        </div>
+                        <h3 className="text-sm md:text-lg font-bold group-hover:text-chart-1">{feature}</h3>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed flex-grow">{desc}</p>
+                    </div>
+                  </FadeIn>
+                )
+              })}
             </div>
           </div>
         )}
@@ -124,12 +134,12 @@ export default async function DetailPage({ params }: DetailPageProps) {
               <h2 className="text-3xl font-bold mb-4">Stack Tecnológica</h2>
               <p className="text-muted-foreground">Tecnologias utilizadas no desenvolvimento.</p>
             </div>
-            <div className="bg-secondary/50 border border-border rounded-xl p-6">
+            <div className="border border-border rounded-xl p-6">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {project.full_stack.map((tech) => (
                   <div 
                     key={tech} 
-                    className="group p-4 bg-background/50 border border-border rounded-lg hover:border-chart-1/50 hover:bg-chart-1/5 transition-all duration-300 flex flex-col items-center gap-2"
+                    className="group p-4 bg-primary/[0.07] border border-border rounded-lg hover:border-chart-1/50 hover:bg-chart-1/5 transition-all duration-300 flex flex-col items-center gap-2"
                   >
                     <span className="text-sm font-medium text-primary">{tech}</span>
                   </div>

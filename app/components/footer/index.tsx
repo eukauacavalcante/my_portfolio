@@ -1,7 +1,7 @@
 export default function Footer() {
     const currentYear = new Date().getFullYear();
     return (
-        <footer id="contact" className="bg-secondary/50 text-primary border-t border-border pt-10 pb-10">
+        <footer id="contact" className="bg-primary/0 text-primary border-t border-border pt-10 pb-10">
             <div className="text-center mb-10">
                 <div className="flex flex-row gap-4 justify-center">
                     <a href="/#about" className="hover:text-chart-1 transition text-sm">Sobre</a>

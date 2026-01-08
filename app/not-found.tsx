@@ -16,7 +16,7 @@ export default function NotFound() {
 
             <Separator className="max-w-6xl mx-auto my-12"/>
 
-            <PageButton href="/#projects" target="_self" ariaLabel="Voltar para o portfólio" title="Voltar para o portfólio">Voltar para o portfólio</PageButton>
+            <PageButton href="/" target="_self" ariaLabel="Voltar para o portfólio" title="Voltar para o portfólio">Voltar para o portfólio</PageButton>
         </div>
     );
 }

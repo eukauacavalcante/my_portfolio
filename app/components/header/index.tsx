@@ -4,7 +4,7 @@ import { MenuSheet } from "@/components/ui/app-sidebar";
 
 export default function Header() {
     return (
-        <header className="fixed w-full top-0 z-50 text-primary backdrop-blur-md bg-primary/5 border-b border-primary/10">
+        <header className="fixed w-full top-0 z-50 text-primary backdrop-blur-md bg-primary/0 border-b border-primary/10">
             <div className="max-w-6xl mx-auto px-6 py-2 md:py-4 flex justify-between items-center">
                 <a href="/" className="text-xl font-bold tracking-tighter hover:text-chart-1 transition-colors duration-300" aria-label="Início" title="Início">
                     KC<span className="text-chart-1">.</span>

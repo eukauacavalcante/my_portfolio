@@ -2,35 +2,40 @@ import { Card } from "@/components/Card";
 import { IconCard } from "@/components/IconCard";
 import { IconStack } from "@/components/IconStack";
 import { StackProject } from "@/components/StackProject";
-import { Button } from "@/components/ui/button";
 import { ChevronUp } from "lucide-react";
 import Image from "next/image";
 import { projects } from "./projects/data";
 import { FadeIn } from "@/components/FadeIn";
+import PageButton from "@/components/PageButton";
+import { stack_data } from "./stack/stack_data";
+
+const categoryLabels: Record<string, string> = {
+  frontend: "Frontend",
+  backend: "Backend",
+  devops: "DevOps e Workspace",
+}
 
 export default function Home() {
   return (
     <main className="text-primary">
         <section className="pt-40 pb-20 px-6 min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-chart-1/30 md:bg-chart-1/20 rounded-full blur-[120px] -z-10"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-chart-4/30 md:bg-chart-4/20 rounded-full blur-[120px] -z-10"></div>
             <FadeIn delay={0.1}>
-                <span className="inline-block py-1 px-3 rounded-full bg-chart-1/5 border border-chart-1/10 text-xs font-medium text-chart-1 mb-6 backdrop-blur-sm">
+                <span className="inline-block py-1 px-3 rounded-full bg-chart-1/5 border border-chart-1/10 text-xs font-medium text-primary mb-6 backdrop-blur-sm">
                     Bem-vindo ao meu portfólio!
                 </span>
                 <h1 className="text-4xl md:text-7xl font-bold tracking-tight mb-4">
                     Kauã Cavalcante
                 </h1>
                     <p className="md:text-2xl text-muted-foreground max-w-2xl mb-10 font-light leading-relaxed">
-                        Desenvolvedor de software especializado em criar soluções <span className="text-primary font-medium">escaláveis, seguras e modernas</span> com foco em APIs robustas e experiência no desenvolvimento de sistemas Full Stack!
+                        Desenvolvedor <span className="text-primary font-medium">Full Stack</span> especializado em criar soluções <span className="text-primary font-medium">escaláveis, seguras e modernas</span> com foco em APIs robustas e experiência no desenvolvimento de sistemas end-to-end!
                     </p>
                 <div className="flex gap-4 justify-center flex-wrap">
-                    <Button asChild className="px-10 py-6 text-primary-foreground">
-                        <a href="#projects" aria-label="Ver Projetos" title="Ver Projetos">Ver Projetos</a>
-                    </Button>
-                    <Button asChild className="px-10 py-6" variant="outline">
-                        <a href="#contact" aria-label="Fale Comigo" title="Fale Comigo">Fale Comigo</a>
-                    </Button>
+                    <PageButton href="#projects" target="_self" className="px-10 py-6" aria-label="Ver Projetos" title="Ver Projetos">
+                        Ver Projetos
+                    </PageButton>
+                    <PageButton className="px-10 py-6 bg-primary-foreground text-primary border hover:border-chart-1 hover:bg-primary-foreground transition-colors duration-300" href="#contact" target="_self" aria-label="Fale Comigo" title="Fale Comigo">
+                        Fale Comigo
+                    </PageButton>
                 </div>
             </FadeIn>
             <div className="flex justify-center items-center mt-20">
@@ -61,16 +66,16 @@ export default function Home() {
                         Sou apaixonado por tecnologia e desenvolvimento de sistemas, com foco em criar soluções seguras, escaláveis e modernas. Acadêmico de <span className="text-primary font-semibold">Análise e Desenvolvimento de Sistemas</span>, em constante evolução.
                         </p>
                         <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                        Tenho experiência sólida em APIs RESTful, bancos de dados relacionais e implementação de boas práticas de segurança. Adoro trabalhar com Python e Django, criando aplicações eficientes e bem estruturadas.
+                        Tenho experiência sólida em sistemas Full Stack, APIs RESTful, bancos de dados relacionais e implementação de boas práticas de segurança. Curto trabalhar com Django e Next.js, criando aplicações eficientes e bem estruturadas.
                         </p>
                         <div className="flex flex-wrap gap-3">
-                        <div className="px-4 py-2 bg-chart-1/10 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
+                        <div className="px-4 py-2 bg-chart-1/25 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
                             <i className="bi bi-pencil"></i> Sempre aprendendo
                         </div>
-                        <div className="px-4 py-2 bg-chart-1/10 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
+                        <div className="px-4 py-2 bg-chart-1/25 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
                             <i className="bi bi-rocket-takeoff"></i> Soluções inovadoras
                         </div>
-                        <div className="px-4 py-2 bg-chart-1/10 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
+                        <div className="px-4 py-2 bg-chart-1/25 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
                             <i className="bi bi-lock"></i> Foco em segurança
                         </div>
                         </div>
@@ -85,66 +90,20 @@ export default function Home() {
                     <h2 className="text-3xl font-bold mb-2">Minha Stack</h2>
                     <p className="text-muted-foreground">Ferramentas que domino e utilizo diariamente.</p>
                 </div>
-                <h2 className="text-2xl font-bold mb-2">Frontend</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <IconCard>
-                        <IconStack icon="fa-brands fa-html5" className="group-hover:text-orange-500">HTML5</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="fa-brands fa-css3-alt" className="group-hover:text-blue-500">CSS3</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="fa-brands fa-square-js" className="group-hover:text-yellow-400">JavaScript</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-filetype-tsx" className="group-hover:text-purple-500">TypeScript</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <div className="bg-foreground p-2 rounded">
-                            <Image src="images/next.svg" alt="Next.js Logo" width={90} height={90} />
+                {Object.entries(stack_data).map(([key, items]) => (
+                    <div key={key} className="mb-10">
+                        <h2 className="text-2xl font-bold mb-2">{categoryLabels[key] ?? key}</h2>
+                        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                            {items.map((item) => (
+                                <IconCard key={item.name}>
+                                    <IconStack icon={item.icon} className="group-hover:text-foreground">
+                                        {item.name}
+                                    </IconStack>
+                                </IconCard>
+                            ))}
                         </div>
-                        <IconStack className="group-hover:text-foreground">Next.js</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-palette" className="group-hover:text-cyan-400">Tailwind CSS</IconStack>
-                    </IconCard>
-                </div>
-                <h2 className="text-2xl font-bold mb-2 mt-5">Backend</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <IconCard>
-                        <IconStack icon="fa-brands fa-python" className="group-hover:text-yellow-500">Python</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-filetype-py" className="group-hover:text-green-500">Django</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-filetype-py" className="group-hover:text-green-500">DRF</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-filetype-py" className="group-hover:text-yellow-500">FastAPI</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-database" className="group-hover:text-blue-500">PostgreSQL</IconStack>
-                    </IconCard>
-                </div>
-                <h2 className="text-2xl font-bold mb-2 mt-5">DevOps e Workspace</h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-                    <IconCard>
-                        <IconStack icon="bi bi-git" className="group-hover:text-yellow-500">Git & Github</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="fa-brands fa-docker" className="group-hover:text-blue-500">Docker</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-rocket-takeoff" className="group-hover:text-orange-500">Postman</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="bi bi-code-square" className="group-hover:text-blue-200">VS Code</IconStack>
-                    </IconCard>
-                    <IconCard>
-                        <IconStack icon="fa-brands fa-linux" className="group-hover:text-foreground">Linux</IconStack>
-                    </IconCard>
-                </div>
+                    </div>
+                ))}
             </div>
         </section>
 
@@ -203,5 +162,5 @@ export default function Home() {
             </div>
         </section>
     </main>
-  );
+  )
 }
