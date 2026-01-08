@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful.",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "/images/og_image.png",
         width: 1200,
         height: 630,
         alt: "Kauã Cavalcante - Desenvolvedor Full Stack",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Kauã Cavalcante | Desenvolvedor Full Stack",
     description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful.",
-    images: ["/images/og-image.png"],
+    images: ["/images/og_image.png"],
   },
   robots: {
     index: true,
