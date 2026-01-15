@@ -101,8 +101,8 @@ export default async function DetailPage({ params }: DetailPageProps) {
           )}
         </div>
 
-        <div className="relative bg-chart-1/10 text-primary rounded-2xl p-6 sm:p-8 mb-12 border border-chart-1/50 shadow-sm overflow-hidden">
-          {project.linkedin && project.linkedin !== "#" && (
+        {project.linkedin && project.linkedin !== "#" && (
+          <div className="relative bg-chart-1/10 text-primary rounded-2xl p-6 sm:p-8 mb-12 border border-chart-1/50 shadow-sm overflow-hidden">
             <div className="relative z-10">
               <div className="flex items-start gap-4 mb-6">
                 <div>
@@ -119,8 +119,8 @@ export default async function DetailPage({ params }: DetailPageProps) {
                 Apoiar no LinkedIn
               </PageButton>
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         {project.functionalities && project.functionalities.length > 0 && (
           <div className="mt-12">

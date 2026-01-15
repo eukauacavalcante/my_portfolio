@@ -5,7 +5,7 @@ export const projects = [
     description: "Projeto acadêmico com o objetivo de utilizar práticas de segurança e implementação de ferramentas educacionais.",
     image: ["/images/projects/homemorpheus.png", "/images/projects/morpheus_conversor.png", "/images/projects/morpheus_moni.png"],
     stack: ["Django", "DRF", "IA Generativa", "Projeto Acadêmico"],
-    full_stack: ['Python', 'JavaScript', 'Django', 'DRF', 'SQLite', 'TailwindCSS', 'OAuth2', 'Groq AI', 'Psutil', 'Swagger', 'Mkdocs'],
+    full_stack: ['Python', 'JavaScript', 'Django', 'DRF', 'SQLite', 'TailwindCSS', 'OAuth2', 'Groq AI', 'Swagger', 'Mkdocs'],
     functionalities: [
       {"Monitoramento": "Análise em tempo real de CPU, RAM e Disco com visualização intuitiva.", "icon": "FaTachometerAlt"},
       {"Análise por IA": "Utilização de IA generativa para interpretar dados do sistema e fornecer insights.", "icon": "FaRobot"},
