@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { AlertCircle, RefreshCw, Home } from "lucide-react"
 import { useLocale, useTranslations } from "next-intl"
@@ -25,7 +25,7 @@ export default function Error({ reset }: { reset: () => void }) {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={reset}
-            className="group inline-flex items-center gap-2 px-5 py-2 md:px-6 md:py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-chart-1/30 hover:-translate-y-0.5"
+            className="group inline-flex items-center gap-2 px-5 py-2 md:px-6 md:py-3 bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-lg transition-all duration-300 hover:shadow-lg hover:shadow-chart-1/30 hover:-translate-y-0.5 cursor-pointer"
             type="button"
           >
             <RefreshCw className="w-5 h-5 group-hover:rotate-180 transition-transform duration-500" />
@@ -53,4 +53,3 @@ export default function Error({ reset }: { reset: () => void }) {
     </div>
   )
 }
-

@@ -17,7 +17,7 @@ interface CarouselPluginProps {
   alt?: string;
 }
 
-export function CarouselPlugin({ images, alt = "Imagem do projeto" }: CarouselPluginProps) {
+export function CarouselPlugin({ images, alt = "" }: CarouselPluginProps) {
   const plugin = useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true })
   )

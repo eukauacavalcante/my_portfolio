@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "../styles/globals.css";
-import { Providers } from "./providers";
-import Header from "../components/layout/header";
-import Footer from "../components/layout/footer";
+import { Inter } from "next/font/google"
+import "../styles/globals.css"
+import { getLocale } from "next-intl/server"
+
 
 const inter = Inter({
   subsets: ["latin"],
@@ -11,52 +9,15 @@ const inter = Inter({
   variable: "--font-inter",
 })
 
-export const metadata: Metadata = {
-  title: {
-    default: "Kauã Cavalcante | Desenvolvedor Full Stack",
-    template: "%s | Kauã Cavalcante"
-  },
-  description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful. Criando soluções escaláveis, seguras e modernas.",
-  keywords: ["desenvolvedor", "full stack", "django", "next.js", "react", "python", "portfolio"],
-  authors: [{ name: "Kauã Cavalcante" }],
-  creator: "Kauã Cavalcante",
-  openGraph: {
-    type: "website",
-    locale: "pt_BR",
-    url: "https://kauacavalcante.vercel.app",
-    siteName: "Kauã Cavalcante",
-    title: "Kauã Cavalcante | Desenvolvedor Full Stack",
-    description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful.",
-    images: [
-      {
-        url: "/images/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Kauã Cavalcante - Desenvolvedor Full Stack",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kauã Cavalcante | Desenvolvedor Full Stack",
-    description: "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful.",
-    images: ["/images/og-image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-}
-
-export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode }>) {
+export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  const locale = await getLocale()
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
-      <body className={`${inter.variable} ${inter.className} antialiased selection:bg-primary selection:text-primary-foreground overflow-x-hidden`} suppressHydrationWarning>
-        <Providers>
-          <Header />
-            {children}
-          <Footer />
-        </Providers>
+    <html lang={locale} suppressHydrationWarning>
+      <body
+        className={`${inter.variable} ${inter.className} antialiased selection:bg-primary selection:text-primary-foreground overflow-x-hidden`}
+        suppressHydrationWarning
+      >
+        {children}
       </body>
     </html>
   )

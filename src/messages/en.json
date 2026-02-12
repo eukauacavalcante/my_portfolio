@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "titleDefault": "Kauã Cavalcante | Full Stack Developer",
+    "titleTemplate": "%s | Kauã Cavalcante",
+    "description": "Full Stack developer specialized in Django, Next.js, and RESTful APIs. Building scalable, secure, and modern solutions.",
+    "keywords": ["developer", "full stack", "django", "next.js", "react", "python", "portfolio"],
+    "creator": "Kauã Cavalcante",
+    "openGraphTitle": "Kauã Cavalcante | Full Stack Developer",
+    "openGraphDescription": "Full Stack developer specialized in Django, Next.js, and RESTful APIs.",
+    "twitterTitle": "Kauã Cavalcante | Full Stack Developer",
+    "twitterDescription": "Full Stack developer specialized in Django, Next.js, and RESTful APIs."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "stack": "Stack",
+    "projects": "Projects",
+    "contact": "Contact",
+    "connect": "Connect",
+    "menu": "Menu",
+    "openMenu": "Open menu",
+    "technologies": "Technologies",
+    "activateLightMode": "Activate light mode",
+    "activateDarkMode": "Activate dark mode",
+    "translate": "Change language",
+    "translateToPortuguese": "Translate to Portuguese",
+    "translateToEnglish": "Translate to English"
+  },
+  "home": {
+    "welcomeBadge": "Welcome to my portfolio!",
+    "name": "Kauã Cavalcante",
+    "description": "Full Stack developer specialized in building scalable, secure, and modern solutions with a focus on robust APIs and end-to-end system development!",
+    "projectsButton": "View Projects",
+    "contactButton": "Contact Me",
+    "scrollHint": "Scroll to next content",
+    "aboutTitle": "About",
+    "aboutTitleHighlight": "me",
+    "aboutParagraph1": "I am passionate about technology and system development, focused on creating secure, scalable, and modern solutions. I study Systems Analysis and Development and keep evolving constantly.",
+    "aboutParagraph2": "I have solid experience with Full Stack systems, RESTful APIs, relational databases, and implementing security best practices. I enjoy working with Django and Next.js, creating efficient and well-structured applications.",
+    "badges": {
+      "learning": "Always learning",
+      "innovation": "Innovative solutions",
+      "security": "Security focused"
+    },
+    "stackTitle": "My Stack",
+    "stackSubtitle": "Tools I master and use daily.",
+    "projectsTitle": "Projects",
+    "featured": "Featured",
+    "detailsButton": "View details",
+    "exploreMoreGithub": "Explore more on Github",
+    "projectImageAlt": "Project image {title}"
+  },
+  "stack": {
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps and Workspace"
+    }
+  },
+  "projectDetail": {
+    "breadcrumbHome": "Home",
+    "breadcrumbProjects": "Projects",
+    "notFoundTitle": "Project not found",
+    "notFoundDescription": "This project does not exist.",
+    "linkedinTitle": "This project is on my LinkedIn!",
+    "linkedinDescription": "See more details and support this work on my professional network",
+    "linkedinButton": "Support on LinkedIn",
+    "mainFeaturesTitle": "Key Features",
+    "mainFeaturesSubtitle": "Powerful tools for monitoring and analysis.",
+    "techStackTitle": "Tech Stack",
+    "techStackSubtitle": "Technologies used to build this project.",
+    "backButton": "Back",
+    "githubButton": "View on GitHub",
+    "docsButton": "View Documentation",
+    "metadataTitlePrefix": "Portfolio - "
+  },
+  "footer": {
+    "ctaTitle": "Shall we work together?",
+    "ctaDescription": "I am always open to new challenges and partnerships. If you have a project in mind or just want to chat, get in touch.",
+    "connect": "Connect with me",
+    "copyrightSuffix": "Full Stack Developer.",
+    "portfolio": "Personal portfolio"
+  },
+  "error": {
+    "title": "Oops! Something went wrong",
+    "description": "We found an unexpected issue while loading this page.",
+    "description2": "Don't worry, you can try again or go back to the home page.",
+    "tryAgain": "Try again",
+    "backHome": "Back to home",
+    "contactPrompt": "If the issue persists, please",
+    "contact": "contact"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "The resource or address you tried to access doesn't exist. Check the URL or go back to the home page.",
+    "backPortfolio": "Back to the portfolio"
+  },
+  "loading": {
+    "loading": "Loading"
+  },
+  "projects": {
+    "list": [
+      {
+        "id": "morpheus-env",
+        "title": "Morpheus Env",
+        "description": "Academic project focused on security practices and educational tools.",
+        "image": [
+          "/images/projects/homemorpheus.png",
+          "/images/projects/morpheus_conversor.png",
+          "/images/projects/morpheus_moni.png"
+        ],
+        "stack": ["Django", "DRF", "Generative AI", "Academic Project"],
+        "full_stack": [
+          "Python",
+          "JavaScript",
+          "Django",
+          "DRF",
+          "SQLite",
+          "TailwindCSS",
+          "OAuth2",
+          "Groq AI",
+          "Swagger",
+          "Mkdocs"
+        ],
+        "functionalities": [
+          {
+            "title": "Monitoring",
+            "description": "Real-time CPU, RAM, and Disk analysis with intuitive visualization.",
+            "icon": "FaTachometerAlt"
+          },
+          {
+            "title": "AI Analysis",
+            "description": "Generative AI to interpret system data and provide insights.",
+            "icon": "FaRobot"
+          },
+          {
+            "title": "Number Converter",
+            "description": "Complete support for binary, hexadecimal, octal, and decimal conversions.",
+            "icon": "FaExchangeAlt"
+          },
+          {
+            "title": "Logical Operations",
+            "description": "Execute AND, OR, and XOR operations to work with boolean values.",
+            "icon": "FaCalculator"
+          },
+          {
+            "title": "Secure Authentication",
+            "description": "Robust system with temporary email validation and advanced protection.",
+            "icon": "FaShieldAlt"
+          },
+          {
+            "title": "Notifications",
+            "description": "Email notifications with integrated Google OAuth2 authentication.",
+            "icon": "FaEnvelope"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/morpheus_env",
+        "documentation": "https://eukauacavalcante.github.io/morpheus_env",
+        "linkedin": "https://www.linkedin.com/posts/eukauacavalcante_morpheus-env-activity-7398835065323036672-TlVp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFr0KQYBUJ81NR6ISP4zvPqbNN1uCX0fRZg",
+        "fullDescription": "Morpheus Env is a web simulator that provides educational tools for analyzing computing systems. The project was developed for experimental and academic purposes, focused on research, learning, and concept demonstration.",
+        "featured": true
+      },
+      {
+        "id": "cars-project",
+        "title": "Car Dealership",
+        "description": "Automobile dealership management platform with internal administration and generative AI.",
+        "image": ["/images/projects/cars_project.png"],
+        "stack": ["Django", "Generative AI"],
+        "full_stack": ["Python", "Django", "Groq AI", "SQLite", "TailwindCSS"],
+        "functionalities": [
+          {
+            "title": "Vehicle Management",
+            "description": "Create, update, and remove vehicles with full details.",
+            "icon": "FaCarSide"
+          },
+          {
+            "title": "Internal Administration",
+            "description": "Admin panel to manage inventory, sales, and customers.",
+            "icon": "FaCog"
+          },
+          {
+            "title": "AI Description Generation",
+            "description": "Generative AI to create detailed vehicle descriptions when information is incomplete.",
+            "icon": "FaRobot"
+          },
+          {
+            "title": "Responsive Interface",
+            "description": "Adaptive design for mobile and desktop devices.",
+            "icon": "FaMobileAlt"
+          },
+          {
+            "title": "Sales Reports",
+            "description": "Tools for performance analysis and detailed report generation.",
+            "icon": "FaChartLine"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/cars_project",
+        "documentation": null,
+        "linkedin": null,
+        "fullDescription": "Software responsible for managing car dealerships. Compatible with generative AI integration to create descriptions when data is missing.",
+        "featured": false
+      },
+      {
+        "id": "parking-service",
+        "title": "Parking Service",
+        "description": "Complete RESTful parking management system with JWT authentication and real-time monitoring.",
+        "image": null,
+        "stack": ["Django", "DRF", "API"],
+        "full_stack": ["Python", "Django", "DRF", "SQLite", "JWT", "Swagger"],
+        "functionalities": [
+          {
+            "title": "JWT Authentication",
+            "description": "Secure registration and login using JSON Web Tokens to protect endpoints.",
+            "icon": "FaShieldAlt"
+          },
+          {
+            "title": "Slot Management",
+            "description": "Full CRUD for parking slots, allowing add, update, delete, and list operations.",
+            "icon": "FaParking"
+          },
+          {
+            "title": "Real-Time Monitoring",
+            "description": "Live tracking of parking slot occupancy.",
+            "icon": "FaChartArea"
+          },
+          {
+            "title": "Interactive Documentation",
+            "description": "Automatic and interactive API documentation using Swagger.",
+            "icon": "FaFileCode"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/parking_service",
+        "documentation": null,
+        "linkedin": null,
+        "fullDescription": "Complete RESTful parking management system with JWT authentication, real-time monitoring, and interactive documentation.",
+        "featured": false
+      },
+      {
+        "id": "flix-api",
+        "title": "Flix API",
+        "description": "API for streaming platforms with robust user authentication and efficient content management.",
+        "image": null,
+        "stack": ["Django", "DRF", "API"],
+        "full_stack": ["Python", "Django", "DRF", "SQLite", "JWT"],
+        "functionalities": [
+          {
+            "title": "JWT Authentication",
+            "description": "Secure registration and login using JSON Web Tokens to protect endpoints.",
+            "icon": "FaShieldAlt"
+          },
+          {
+            "title": "Content Management",
+            "description": "Full CRUD for movies and series, allowing add, update, delete, and list operations.",
+            "icon": "FaPlay"
+          },
+          {
+            "title": "Categories and Genres",
+            "description": "Efficient content organization by categories and genres for better navigation.",
+            "icon": "FaTags"
+          },
+          {
+            "title": "Ratings and Comments",
+            "description": "Functionality for users to rate and comment on available content.",
+            "icon": "FaStar"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/flix_api",
+        "documentation": null,
+        "linkedin": null,
+        "fullDescription": "API for streaming platforms with robust user authentication and efficient content management.",
+        "featured": false
+      }
+    ]
+  }
+}

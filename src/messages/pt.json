@@ -1,0 +1,275 @@
+{
+  "metadata": {
+    "titleDefault": "Kauã Cavalcante | Desenvolvedor Full Stack",
+    "titleTemplate": "%s | Kauã Cavalcante",
+    "description": "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful. Criando soluções escaláveis, seguras e modernas.",
+    "keywords": ["desenvolvedor", "full stack", "django", "next.js", "react", "python", "portfolio"],
+    "creator": "Kauã Cavalcante",
+    "openGraphTitle": "Kauã Cavalcante | Desenvolvedor Full Stack",
+    "openGraphDescription": "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful.",
+    "twitterTitle": "Kauã Cavalcante | Desenvolvedor Full Stack",
+    "twitterDescription": "Desenvolvedor Full Stack especializado em Django, Next.js e APIs RESTful."
+  },
+  "nav": {
+    "home": "Início",
+    "about": "Sobre",
+    "stack": "Stack",
+    "projects": "Projetos",
+    "contact": "Contato",
+    "connect": "Conecte-se",
+    "menu": "Menu",
+    "openMenu": "Abrir menu",
+    "technologies": "Tecnologias",
+    "activateLightMode": "Ativar modo claro",
+    "activateDarkMode": "Ativar modo escuro",
+    "translate": "Alterar idioma",
+    "translateToPortuguese": "Traduzir para Português",
+    "translateToEnglish": "Traduzir para Inglês"
+  },
+  "home": {
+    "welcomeBadge": "Bem-vindo ao meu portfólio!",
+    "name": "Kauã Cavalcante",
+    "description": "Desenvolvedor Full Stack especializado em criar soluções escaláveis, seguras e modernas com foco em APIs robustas e experiência no desenvolvimento de sistemas end-to-end!",
+    "projectsButton": "Ver Projetos",
+    "contactButton": "Fale Comigo",
+    "scrollHint": "Ir para próximo conteúdo",
+    "aboutTitle": "Sobre",
+    "aboutTitleHighlight": "mim",
+    "aboutParagraph1": "Sou apaixonado por tecnologia e desenvolvimento de sistemas, com foco em criar soluções seguras, escaláveis e modernas. Acadêmico de Análise e Desenvolvimento de Sistemas, em constante evolução.",
+    "aboutParagraph2": "Tenho experiência sólida em sistemas Full Stack, APIs RESTful, bancos de dados relacionais e implementação de boas práticas de segurança. Curto trabalhar com Django e Next.js, criando aplicações eficientes e bem estruturadas.",
+    "badges": {
+      "learning": "Sempre aprendendo",
+      "innovation": "Soluções inovadoras",
+      "security": "Foco em segurança"
+    },
+    "stackTitle": "Minha Stack",
+    "stackSubtitle": "Ferramentas que domino e utilizo diariamente.",
+    "projectsTitle": "Projetos",
+    "featured": "Destaque",
+    "detailsButton": "Ver detalhes",
+    "exploreMoreGithub": "Explorar mais no Github",
+    "projectImageAlt": "Imagem do projeto {title}"
+  },
+  "stack": {
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "devops": "DevOps e Workspace"
+    }
+  },
+  "projectDetail": {
+    "breadcrumbHome": "Início",
+    "breadcrumbProjects": "Projetos",
+    "notFoundTitle": "Projeto não encontrado",
+    "notFoundDescription": "Este projeto não existe.",
+    "linkedinTitle": "Este projeto está no meu LinkedIn!",
+    "linkedinDescription": "Confira mais detalhes e apoie este trabalho na minha rede profissional",
+    "linkedinButton": "Apoiar no LinkedIn",
+    "mainFeaturesTitle": "Principais Funcionalidades",
+    "mainFeaturesSubtitle": "Ferramentas poderosas para monitoramento e análise.",
+    "techStackTitle": "Stack Tecnológica",
+    "techStackSubtitle": "Tecnologias utilizadas no desenvolvimento deste projeto.",
+    "backButton": "Voltar",
+    "githubButton": "Ver no GitHub",
+    "docsButton": "Ver Documentação",
+    "metadataTitlePrefix": "Portfólio - "
+  },
+  "footer": {
+    "ctaTitle": "Vamos trabalhar juntos?",
+    "ctaDescription": "Estou sempre aberto a novos desafios e parcerias. Se você tem um projeto em mente ou apenas quer trocar uma ideia, entre em contato.",
+    "connect": "Conecte-se comigo",
+    "copyrightSuffix": "Desenvolvedor Full Stack.",
+    "portfolio": "Portfólio pessoal"
+  },
+  "error": {
+    "title": "Ops! Algo deu errado",
+    "description": "Encontramos um problema inesperado ao carregar esta página.",
+    "description2": "Não se preocupe, você pode tentar novamente ou voltar para a página inicial.",
+    "tryAgain": "Tentar novamente",
+    "backHome": "Voltar ao início",
+    "contactPrompt": "Se o problema persistir, entre em",
+    "contact": "contato"
+  },
+  "notFound": {
+    "title": "Página não encontrada",
+    "description": "O recurso ou endereço que você tentou acessar não existe. Verifique o URL ou navegue para a página inicial.",
+    "backPortfolio": "Voltar para o portfólio"
+  },
+  "loading": {
+    "loading": "Carregando"
+  },
+  "projects": {
+    "list": [
+      {
+        "id": "morpheus-env",
+        "title": "Morpheus Env",
+        "description": "Projeto acadêmico com o objetivo de utilizar práticas de segurança e implementação de ferramentas educacionais.",
+        "image": [
+          "/images/projects/homemorpheus.png",
+          "/images/projects/morpheus_conversor.png",
+          "/images/projects/morpheus_moni.png"
+        ],
+        "stack": ["Django", "DRF", "IA Generativa", "Projeto Acadêmico"],
+        "full_stack": [
+          "Python",
+          "JavaScript",
+          "Django",
+          "DRF",
+          "SQLite",
+          "TailwindCSS",
+          "OAuth2",
+          "Groq AI",
+          "Swagger",
+          "Mkdocs"
+        ],
+        "functionalities": [
+          {
+            "title": "Monitoramento",
+            "description": "Análise em tempo real de CPU, RAM e Disco com visualização intuitiva.",
+            "icon": "FaTachometerAlt"
+          },
+          {
+            "title": "Análise por IA",
+            "description": "Utilização de IA generativa para interpretar dados do sistema e fornecer insights.",
+            "icon": "FaRobot"
+          },
+          {
+            "title": "Conversor Numérico",
+            "description": "Suporte completo para conversões entre binário, hexadecimal, octal e decimal.",
+            "icon": "FaExchangeAlt"
+          },
+          {
+            "title": "Operações Lógicas",
+            "description": "Execute operações AND, OR e XOR para trabalhar com valores booleanos.",
+            "icon": "FaCalculator"
+          },
+          {
+            "title": "Autenticação Segura",
+            "description": "Sistema robusto com validação de email temporário e proteção avançada.",
+            "icon": "FaShieldAlt"
+          },
+          {
+            "title": "Notificações",
+            "description": "Notificações por email com autenticação OAuth2 do Google integrada.",
+            "icon": "FaEnvelope"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/morpheus_env",
+        "documentation": "https://eukauacavalcante.github.io/morpheus_env",
+        "linkedin": "https://www.linkedin.com/posts/eukauacavalcante_morpheus-env-activity-7398835065323036672-TlVp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFr0KQYBUJ81NR6ISP4zvPqbNN1uCX0fRZg",
+        "fullDescription": "Morpheus Env é um simulador web que oferece ferramentas educacionais para análise de sistemas computacionais. O projeto foi desenvolvido com fins experimentais e acadêmicos, voltado à pesquisa, aprendizado e demonstração de conceitos.",
+        "featured": true
+      },
+      {
+        "id": "cars-project",
+        "title": "Revenda de Carros",
+        "description": "Plataforma de gestão de revendas de automóveis com sistema de administração interno e IA generativa.",
+        "image": ["/images/projects/cars_project.png"],
+        "stack": ["Django", "IA Generativa"],
+        "full_stack": ["Python", "Django", "Groq AI", "SQLite", "TailwindCSS"],
+        "functionalities": [
+          {
+            "title": "Gestão de Veículos",
+            "description": "Cadastro, atualização e remoção de veículos com detalhes completos.",
+            "icon": "FaCarSide"
+          },
+          {
+            "title": "Administração Interna",
+            "description": "Painel administrativo para gerenciar inventário, vendas e clientes.",
+            "icon": "FaCog"
+          },
+          {
+            "title": "Geração de Descrições por IA",
+            "description": "Utilização de IA generativa para criar descrições detalhadas de veículos com informações incompletas.",
+            "icon": "FaRobot"
+          },
+          {
+            "title": "Interface Responsiva",
+            "description": "Design adaptável para uso em dispositivos móveis e desktops.",
+            "icon": "FaMobileAlt"
+          },
+          {
+            "title": "Relatórios de Vendas",
+            "description": "Ferramentas para análise de desempenho e geração de relatórios detalhados.",
+            "icon": "FaChartLine"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/cars_project",
+        "documentation": null,
+        "linkedin": null,
+        "fullDescription": "Software responsável pela gestão de revendas de veículos. Compatível com a integração de inteligência artificial para gerar descrições nos casos de informações ausentes.",
+        "featured": false
+      },
+      {
+        "id": "parking-service",
+        "title": "Serviço de Estacionamento",
+        "description": "Sistema RESTful completo de gestão de estacionamento com autenticação JWT e monitoramento em tempo real.",
+        "image": null,
+        "stack": ["Django", "DRF", "API"],
+        "full_stack": ["Python", "Django", "DRF", "SQLite", "JWT", "Swagger"],
+        "functionalities": [
+          {
+            "title": "Autenticação JWT",
+            "description": "Sistema seguro de registro e login utilizando JSON Web Tokens para proteção de endpoints.",
+            "icon": "FaShieldAlt"
+          },
+          {
+            "title": "Gerenciamento de Vagas",
+            "description": "CRUD completo para vagas de estacionamento, permitindo adição, atualização, exclusão e listagem.",
+            "icon": "FaParking"
+          },
+          {
+            "title": "Monitoramento em Tempo Real",
+            "description": "Acompanhamento ao vivo da ocupação das vagas de estacionamento.",
+            "icon": "FaChartArea"
+          },
+          {
+            "title": "Documentação Interativa",
+            "description": "Documentação automática e interativa da API utilizando Swagger.",
+            "icon": "FaFileCode"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/parking_service",
+        "documentation": null,
+        "linkedin": null,
+        "fullDescription": "Sistema RESTful completo de gestão de estacionamento com autenticação JWT, monitoramento em tempo real e documentação interativa.",
+        "featured": false
+      },
+      {
+        "id": "flix-api",
+        "title": "Flix API",
+        "description": "API para plataformas de streaming com autenticação robusta de usuários e gerenciamento eficiente de conteúdos.",
+        "image": null,
+        "stack": ["Django", "DRF", "API"],
+        "full_stack": ["Python", "Django", "DRF", "SQLite", "JWT"],
+        "functionalities": [
+          {
+            "title": "Autenticação JWT",
+            "description": "Sistema seguro de registro e login utilizando JSON Web Tokens para proteção de endpoints.",
+            "icon": "FaShieldAlt"
+          },
+          {
+            "title": "Gerenciamento de Conteúdos",
+            "description": "CRUD completo para filmes e séries, permitindo adição, atualização, exclusão e listagem.",
+            "icon": "FaPlay"
+          },
+          {
+            "title": "Categorias e Gêneros",
+            "description": "Organização eficiente de conteúdos por categorias e gêneros para melhor navegação.",
+            "icon": "FaTags"
+          },
+          {
+            "title": "Avaliações e Comentários",
+            "description": "Funcionalidade para usuários avaliarem e comentarem sobre os conteúdos disponíveis.",
+            "icon": "FaStar"
+          }
+        ],
+        "github": "https://github.com/eukauacavalcante/flix_api",
+        "documentation": null,
+        "linkedin": null,
+        "fullDescription": "API para plataformas de streaming com autenticação robusta de usuários e gerenciamento eficiente de conteúdos.",
+        "featured": false
+      }
+    ]
+  }
+}

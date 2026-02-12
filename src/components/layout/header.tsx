@@ -2,29 +2,73 @@ import PageButton from "@/components/ui/PageButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { MenuSheet } from "@/components/ui/app-sidebar";
 import { FaLinkedin } from "react-icons/fa";
+import { getLocale, getTranslations } from "next-intl/server";
+import LanguageSwitcher from "@/app/[locale]/components/LanguageSwitcher";
 
-export default function Header() {
+export default async function Header() {
+    const locale = await getLocale();
+    const t = await getTranslations({ locale, namespace: "nav" });
+
     return (
         <header className="fixed w-full top-0 z-50 text-primary backdrop-blur-md bg-primary/0 border-b border-primary/10">
             <div className="max-w-6xl mx-auto px-6 py-2 md:py-4 flex justify-between items-center">
-                <a href="/" className="text-xl font-bold tracking-tighter hover:text-chart-1 transition-colors duration-300" aria-label="Início" title="Início">
+                <a
+                    href={`/${locale}`}
+                    className="text-xl font-bold tracking-tighter hover:text-chart-1 transition-colors duration-300"
+                    aria-label={t("home")}
+                    title={t("home")}
+                >
                     KC<span className="text-chart-1">.</span>
                 </a>
                 <nav className="hidden md:flex gap-8 text-sm font-medium items-center">
-                    <a href="/#about" className="hover:text-chart-1 transition-colors" aria-label="Sobre" title="Sobre">Sobre</a>
-                    <a href="/#stack" className="hover:text-chart-1 transition-colors" aria-label="Stack" title="Stack">Stack</a>
-                    <a href="/#projects" className="hover:text-chart-1 transition-colors" aria-label="Projetos" title="Projetos">Projetos</a>
-                    <a href="#contact" className="hover:text-chart-1 transition-colors" aria-label="Contato" title="Contato">Contato</a>
+                    <a
+                        href={`/${locale}#about`}
+                        className="hover:text-chart-1 transition-colors"
+                        aria-label={t("about")}
+                        title={t("about")}
+                    >
+                        {t("about")}
+                    </a>
+                    <a
+                        href={`/${locale}#stack`}
+                        className="hover:text-chart-1 transition-colors"
+                        aria-label={t("stack")}
+                        title={t("stack")}
+                    >
+                        {t("stack")}
+                    </a>
+                    <a
+                        href={`/${locale}#projects`}
+                        className="hover:text-chart-1 transition-colors"
+                        aria-label={t("projects")}
+                        title={t("projects")}
+                    >
+                        {t("projects")}
+                    </a>
+                    <a
+                    
+                        href={`/${locale}#contact`}
+                        className="hover:text-chart-1 transition-colors"
+                        aria-label={t("contact")}
+                        title={t("contact")}
+                    >
+                        {t("contact")}
+                    </a>
+                    <LanguageSwitcher/>
                     <ThemeToggle />
-                    <PageButton href="https://www.linkedin.com/in/eukauacavalcante/" ariaLabel="Conecte-se no LinkedIn" title="Conecte-se no LinkedIn">
+                    <PageButton
+                        href="https://www.linkedin.com/in/eukauacavalcante/"
+                        ariaLabel={t("connect")}
+                        title={t("connect")}
+                    >
                         <FaLinkedin className="w-5 h-5" />
-                        Conecte-se
+                        {t("connect")}
                     </PageButton>
                 </nav>
-                <div className="flex items-center gap-2 md:hidden">
-                    <ThemeToggle />
-                    <MenuSheet />
-                </div>
+            <div className="flex items-center gap-2 md:hidden">
+                <ThemeToggle />
+                <MenuSheet />
+            </div>
             </div>
         </header>
     )
