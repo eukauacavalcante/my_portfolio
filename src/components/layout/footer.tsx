@@ -56,6 +56,8 @@ export default async function Footer() {
                 href="https://www.linkedin.com/in/eukauacavalcante/"
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-chart-1 hover:text-primary-foreground hover:scale-110 transition-all duration-300"
+                aria-label="LinkedIn"
+                title="LinkedIn"
               >
                 <FaLinkedin className="text-xl" />
               </a>
@@ -63,6 +65,8 @@ export default async function Footer() {
                 href="https://github.com/eukauacavalcante/"
                 target="_blank"
                 className="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center text-primary hover:bg-chart-1 hover:text-primary-foreground hover:scale-110 transition-all duration-300"
+                aria-label="GitHub"
+                title="GitHub"
               >
                 <FaGithub className="text-xl" />
               </a>

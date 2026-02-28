@@ -24,32 +24,24 @@ export default async function Header() {
           <a
             href={`/${locale}#about`}
             className="hover:text-chart-1 transition-colors"
-            aria-label={t("about")}
-            title={t("about")}
           >
             {t("about")}
           </a>
           <a
             href={`/${locale}#stack`}
             className="hover:text-chart-1 transition-colors"
-            aria-label={t("stack")}
-            title={t("stack")}
           >
             {t("stack")}
           </a>
           <a
             href={`/${locale}#projects`}
             className="hover:text-chart-1 transition-colors"
-            aria-label={t("projects")}
-            title={t("projects")}
           >
             {t("projects")}
           </a>
           <a
             href={`/${locale}#contact`}
             className="hover:text-chart-1 transition-colors"
-            aria-label={t("contact")}
-            title={t("contact")}
           >
             {t("contact")}
           </a>
@@ -57,8 +49,6 @@ export default async function Header() {
           <ThemeToggle />
           <PageButton
             href="https://www.linkedin.com/in/eukauacavalcante/"
-            ariaLabel={t("connect")}
-            title={t("connect")}
           >
             <FaLinkedin className="w-5 h-5" />
             {t("connect")}
