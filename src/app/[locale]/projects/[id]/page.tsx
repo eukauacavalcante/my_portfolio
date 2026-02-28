@@ -1,56 +1,57 @@
-import { StackProject } from "@/components/ui/StackProject"
-import Link from "next/link"
-import { notFound } from "next/navigation"
-import { Metadata } from "next"
-import { Separator } from "@/components/ui/separator"
-import PageButton from "@/components/ui/PageButton"
-import { CarouselPlugin } from "@/components/ui/CustomCarousel"
+import { StackProject } from "@/components/ui/StackProject";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { Metadata } from "next";
+import { Separator } from "@/components/ui/separator";
+import PageButton from "@/components/ui/PageButton";
+import { CarouselPlugin } from "@/components/ui/CustomCarousel";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
-  BreadcrumbSeparator
-} from "@/components/ui/breadcrumb"
-import { FadeIn } from "@/components/ui/FadeIn"
-import * as FaIcons from "react-icons/fa"
-import { Camera } from "lucide-react"
-import { getProjects } from "../data"
-import { getTranslations } from "next-intl/server"
-
+  BreadcrumbSeparator,
+} from "@/components/ui/breadcrumb";
+import { FadeIn } from "@/components/ui/FadeIn";
+import * as FaIcons from "react-icons/fa";
+import { Camera } from "lucide-react";
+import { getProjects } from "../data";
+import { getTranslations } from "next-intl/server";
 
 interface DetailPageProps {
-  params: Promise<{ id: string; locale: string }>
+  params: Promise<{ id: string; locale: string }>;
 }
 
-export async function generateMetadata({ params }: DetailPageProps): Promise<Metadata> {
-  const { id, locale } = await params
-  const t = await getTranslations({ locale, namespace: "projectDetail" })
-  const projects = await getProjects(locale)
-  const project = projects.find((item) => item.id === id)
+export async function generateMetadata({
+  params,
+}: DetailPageProps): Promise<Metadata> {
+  const { id, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "projectDetail" });
+  const projects = await getProjects(locale);
+  const project = projects.find((item) => item.id === id);
 
   if (!project) {
     return {
       title: t("notFoundTitle"),
-      description: t("notFoundDescription")
-    }
+      description: t("notFoundDescription"),
+    };
   }
 
   return {
     title: `${t("metadataTitlePrefix")}${project.title}`,
-    description: project.description
-  }
+    description: project.description,
+  };
 }
 
 export default async function DetailPage({ params }: DetailPageProps) {
-  const { id, locale } = await params
-  const t = await getTranslations({ locale, namespace: "projectDetail" })
-  const projects = await getProjects(locale)
-  const project = projects.find((item) => item.id === id)
+  const { id, locale } = await params;
+  const t = await getTranslations({ locale, namespace: "projectDetail" });
+  const projects = await getProjects(locale);
+  const project = projects.find((item) => item.id === id);
 
   if (!project) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -66,7 +67,9 @@ export default async function DetailPage({ params }: DetailPageProps) {
             <BreadcrumbSeparator />
             <BreadcrumbItem>
               <BreadcrumbLink asChild>
-                <Link href={`/${locale}#projects`}>{t("breadcrumbProjects")}</Link>
+                <Link href={`/${locale}#projects`}>
+                  {t("breadcrumbProjects")}
+                </Link>
               </BreadcrumbLink>
             </BreadcrumbItem>
             <BreadcrumbSeparator />
@@ -100,7 +103,11 @@ export default async function DetailPage({ params }: DetailPageProps) {
 
         <div className="flex flex-wrap gap-4 mb-12">
           {project.github && project.github !== "#" && (
-            <PageButton href={project.github} ariaLabel={t("githubButton")} title={t("githubButton")}>
+            <PageButton
+              href={project.github}
+              ariaLabel={t("githubButton")}
+              title={t("githubButton")}
+            >
               <FaIcons.FaGithub className="text-lg" />
               {t("githubButton")}
             </PageButton>
@@ -123,8 +130,12 @@ export default async function DetailPage({ params }: DetailPageProps) {
             <div className="relative z-10">
               <div className="flex items-start gap-4 mb-6">
                 <div>
-                  <h2 className="text-xl sm:text-2xl font-bold mb-2">{t("linkedinTitle")}</h2>
-                  <p className="text-muted-foreground text-sm sm:text-base">{t("linkedinDescription")}</p>
+                  <h2 className="text-xl sm:text-2xl font-bold mb-2">
+                    {t("linkedinTitle")}
+                  </h2>
+                  <p className="text-muted-foreground text-sm sm:text-base">
+                    {t("linkedinDescription")}
+                  </p>
                 </div>
               </div>
               <PageButton
@@ -147,24 +158,35 @@ export default async function DetailPage({ params }: DetailPageProps) {
                 <span className="w-1.5 h-8 bg-chart-1 rounded-full" />
                 {t("mainFeaturesTitle")}
               </h2>
-              <p className="text-muted-foreground">{t("mainFeaturesSubtitle")}</p>
+              <p className="text-muted-foreground">
+                {t("mainFeaturesSubtitle")}
+              </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
               {project.functionalities.map((func, index) => {
-                const IconComponent = (FaIcons as any)[func.icon] || FaIcons.FaCode;
+                const IconComponent =
+                  (FaIcons as any)[func.icon] || FaIcons.FaCode;
                 return (
-                  <FadeIn delay={0.1 * index} key={func.title} className="h-full">
+                  <FadeIn
+                    delay={0.1 * index}
+                    key={func.title}
+                    className="h-full"
+                  >
                     <div className="group h-full p-6 bg-linear-to-br from-secondary/80 via-background to-secondary/80 border border-primary/5 rounded-xl hover:border-chart-1 transition-all duration-300 flex flex-col">
                       <div className="flex items-center gap-3 mb-3">
                         <div className="w-10 h-10 rounded-lg bg-chart-1/10 flex items-center justify-center group-hover:bg-chart-1/20 transition-colors">
                           <IconComponent className="text-chart-1 text-lg" />
                         </div>
-                        <h3 className="text-sm md:text-lg font-bold group-hover:text-chart-1">{func.title}</h3>
+                        <h3 className="text-sm md:text-lg font-bold group-hover:text-chart-1">
+                          {func.title}
+                        </h3>
                       </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed grow">{func.description}</p>
+                      <p className="text-muted-foreground text-sm leading-relaxed grow">
+                        {func.description}
+                      </p>
                     </div>
                   </FadeIn>
-                )
+                );
               })}
             </div>
           </div>
@@ -177,7 +199,9 @@ export default async function DetailPage({ params }: DetailPageProps) {
                 <span className="w-1.5 h-8 bg-chart-1 rounded-full" />
                 {t("techStackTitle")}
               </h2>
-              <p className="text-muted-foreground ml-5">{t("techStackSubtitle")}</p>
+              <p className="text-muted-foreground ml-5">
+                {t("techStackSubtitle")}
+              </p>
             </div>
             <div className="relative border border-border/50 rounded-2xl p-6 sm:p-8 bg-linear-to-br from-secondary/80 via-background to-secondary/80 overflow-hidden">
               <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
@@ -205,5 +229,5 @@ export default async function DetailPage({ params }: DetailPageProps) {
         </PageButton>
       </div>
     </main>
-  )
+  );
 }

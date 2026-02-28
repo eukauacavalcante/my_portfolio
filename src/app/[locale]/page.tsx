@@ -1,21 +1,27 @@
-import { Card } from "@/components/ui/Card"
-import IconCard from "@/components/ui/IconCard"
-import IconStack from "@/components/ui/IconStack"
-import { StackProject } from "@/components/ui/StackProject"
-import { ChevronDown, ArrowRight, Pencil, Lock, Rocket, Camera } from "lucide-react"
-import Image from "next/image"
-import { FadeIn } from "@/components/ui/FadeIn"
-import PageButton from "@/components/ui/PageButton"
-import { stack_data } from "./stack/stack_data"
-import { getLocale, getTranslations } from "next-intl/server"
-import { getProjects } from "./projects/data"
-
+import { Card } from "@/components/ui/Card";
+import IconCard from "@/components/ui/IconCard";
+import IconStack from "@/components/ui/IconStack";
+import { StackProject } from "@/components/ui/StackProject";
+import {
+  ChevronDown,
+  ArrowRight,
+  Pencil,
+  Lock,
+  Rocket,
+  Camera,
+} from "lucide-react";
+import Image from "next/image";
+import { FadeIn } from "@/components/ui/FadeIn";
+import PageButton from "@/components/ui/PageButton";
+import { stack_data } from "./stack/stack_data";
+import { getLocale, getTranslations } from "next-intl/server";
+import { getProjects } from "./projects/data";
 
 export default async function Home() {
-  const locale = await getLocale()
-  const t = await getTranslations({ locale, namespace: "home" })
-  const tStack = await getTranslations({ locale, namespace: "stack" })
-  const projects = await getProjects(locale)
+  const locale = await getLocale();
+  const t = await getTranslations({ locale, namespace: "home" });
+  const tStack = await getTranslations({ locale, namespace: "stack" });
+  const projects = await getProjects(locale);
 
   return (
     <main className="text-primary">
@@ -48,12 +54,18 @@ export default async function Home() {
           </div>
         </FadeIn>
         <div className="absolute inset-x-0 bottom-20 flex justify-center pointer-events-none">
-          <ChevronDown className="w-6 h-6 text-primary animate-bounce md:w-8 md:h-8" aria-hidden="true" />
+          <ChevronDown
+            className="w-6 h-6 text-primary animate-bounce md:w-8 md:h-8"
+            aria-hidden="true"
+          />
           <span className="sr-only">{t("scrollHint")}</span>
         </div>
       </section>
 
-      <section id="about" className="py-20 md:py-65 px-6 border-y border-border">
+      <section
+        id="about"
+        className="py-20 md:py-65 px-6 border-y border-border"
+      >
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <FadeIn delay={0.1}>
             <div className="relative group">
@@ -69,7 +81,8 @@ export default async function Home() {
           <FadeIn delay={0.2}>
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                {t("aboutTitle")} <span className="text-chart-1">{t("aboutTitleHighlight")}</span>
+                {t("aboutTitle")}{" "}
+                <span className="text-chart-1">{t("aboutTitleHighlight")}</span>
               </h2>
               <p className="text-muted-foreground text-lg leading-relaxed mb-6">
                 {t("aboutParagraph1")}
@@ -79,13 +92,16 @@ export default async function Home() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <div className="px-4 py-2 bg-chart-1/25 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
-                  <Pencil className="inline-block w-4 h-4 mr-1" /> {t("badges.learning")}
+                  <Pencil className="inline-block w-4 h-4 mr-1" />{" "}
+                  {t("badges.learning")}
                 </div>
                 <div className="px-4 py-2 bg-chart-1/25 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
-                  <Rocket className="inline-block w-4 h-4 mr-1" /> {t("badges.innovation")}
+                  <Rocket className="inline-block w-4 h-4 mr-1" />{" "}
+                  {t("badges.innovation")}
                 </div>
                 <div className="px-4 py-2 bg-chart-1/25 border border-chart-1/60 rounded-lg text-accent-foreground text-sm">
-                  <Lock className="inline-block w-4 h-4 mr-1" /> {t("badges.security")}
+                  <Lock className="inline-block w-4 h-4 mr-1" />{" "}
+                  {t("badges.security")}
                 </div>
               </div>
             </div>
@@ -93,7 +109,10 @@ export default async function Home() {
         </div>
       </section>
 
-      <section id="stack" className="py-20 md:py-35 bg-secondary/50 border-y border-border">
+      <section
+        id="stack"
+        className="py-20 md:py-35 bg-secondary/50 border-y border-border"
+      >
         <div className="max-w-6xl mx-auto px-6">
           <div className="mb-10">
             <h2 className="text-3xl font-bold mb-2">{t("stackTitle")}</h2>
@@ -101,11 +120,16 @@ export default async function Home() {
           </div>
           {Object.entries(stack_data).map(([key, items]) => (
             <div key={key} className="mb-10">
-              <h2 className="text-2xl font-bold mb-2">{tStack(`categories.${key}`)}</h2>
+              <h2 className="text-2xl font-bold mb-2">
+                {tStack(`categories.${key}`)}
+              </h2>
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 {items.map((item) => (
                   <IconCard key={item.name}>
-                    <IconStack icon={item.icon} className="group-hover:text-foreground">
+                    <IconStack
+                      icon={item.icon}
+                      className="group-hover:text-foreground"
+                    >
                       {item.name}
                     </IconStack>
                   </IconCard>
@@ -118,7 +142,9 @@ export default async function Home() {
 
       <section id="projects" className="py-24 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-16 text-center">{t("projectsTitle")}</h2>
+          <h2 className="text-3xl font-bold mb-16 text-center">
+            {t("projectsTitle")}
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
             {projects.map((project) => (
               <FadeIn delay={0.2} key={project.id} className="h-full">
@@ -183,11 +209,12 @@ export default async function Home() {
               title={t("exploreMoreGithub")}
               rel="noopener noreferrer"
             >
-              {t("exploreMoreGithub")} <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+              {t("exploreMoreGithub")}{" "}
+              <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
             </a>
           </div>
         </div>
       </section>
     </main>
-  )
+  );
 }

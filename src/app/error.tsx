@@ -1,12 +1,11 @@
-'use client'
+"use client";
 
-import { AlertCircle, RefreshCw, Home } from "lucide-react"
-import { useLocale, useTranslations } from "next-intl"
-
+import { AlertCircle, RefreshCw, Home } from "lucide-react";
+import { useLocale, useTranslations } from "next-intl";
 
 export default function Error({ reset }: { reset: () => void }) {
-  const t = useTranslations("error")
-  const locale = useLocale()
+  const t = useTranslations("error");
+  const locale = useLocale();
 
   return (
     <div className="min-h-screen flex items-center justify-center p-6">
@@ -19,9 +18,13 @@ export default function Error({ reset }: { reset: () => void }) {
             </div>
           </div>
         </div>
-        <h1 className="text-2xl md:text-5xl font-bold text-foreground mb-4">{t("title")}</h1>
+        <h1 className="text-2xl md:text-5xl font-bold text-foreground mb-4">
+          {t("title")}
+        </h1>
         <p className="text-muted-foreground text-lg mb-2">{t("description")}</p>
-        <p className="text-muted-foreground/70 text-sm mb-8">{t("description2")}</p>
+        <p className="text-muted-foreground/70 text-sm mb-8">
+          {t("description2")}
+        </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={reset}
@@ -51,6 +54,5 @@ export default function Error({ reset }: { reset: () => void }) {
         </p>
       </div>
     </div>
-  )
+  );
 }
-

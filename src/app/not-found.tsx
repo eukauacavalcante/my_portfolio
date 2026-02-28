@@ -1,10 +1,9 @@
-import Link from "next/link"
-import { defaultLocale } from "@/i18n"
-
+import Link from "next/link";
+import { defaultLocale } from "@/i18n";
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 text-center">
+    <div className="min-h-screen bg-primary flex flex-col items-center justify-center p-6 text-center">
       <h1 className="text-5xl font-extrabold mb-4">404</h1>
       <p className="text-lg mb-8 text-gray-500">Page not found</p>
       <Link
@@ -14,5 +13,5 @@ export default function NotFound() {
         Go home
       </Link>
     </div>
-  )
+  );
 }

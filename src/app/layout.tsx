@@ -1,16 +1,17 @@
-import { Inter } from "next/font/google"
-import "../styles/globals.css"
-import { getLocale } from "next-intl/server"
-
+import { Inter } from "next/font/google";
+import "../styles/globals.css";
+import { getLocale } from "next-intl/server";
 
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "600", "700"],
   variable: "--font-inter",
-})
+});
 
-export default async function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  const locale = await getLocale()
+export default async function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
+  const locale = await getLocale();
   return (
     <html lang={locale} suppressHydrationWarning>
       <body
@@ -20,5 +21,5 @@ export default async function RootLayout({ children }: Readonly<{ children: Reac
         {children}
       </body>
     </html>
-  )
+  );
 }
