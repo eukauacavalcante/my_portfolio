@@ -233,6 +233,8 @@ Agradeço pela leitura :)
 
 **Kauã Cavalcante | Desenvolvedor Full Stack**
 
+Projeto licenciado pela [GNU GENERAL PUBLIC LICENSE](https://github.com/eukauacavalcante/my_portfolio/blob/main/LICENSE)
+
 [LinkedIn](https://linkedin.com/in/eukauacavalcante) • [GitHub](https://github.com/eukauacavalcante)
 
 </div>
