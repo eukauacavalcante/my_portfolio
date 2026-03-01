@@ -52,9 +52,9 @@
   },
   "stack": {
     "categories": {
-      "frontend": "Frontend",
-      "backend": "Backend",
-      "devops": "DevOps and Workspace"
+      "frameworks": "Frameworks",
+      "languages": "Linguagens",
+      "devops": "DevOps e Workspace"
     }
   },
   "projectDetail": {
@@ -65,6 +65,7 @@
     "linkedinTitle": "This project is on my LinkedIn!",
     "linkedinDescription": "See more details and support this work on my professional network",
     "linkedinButton": "Support on LinkedIn",
+    "developingTitle": "This project is currently under development.",
     "mainFeaturesTitle": "Key Features",
     "mainFeaturesSubtitle": "Powerful tools for monitoring and analysis.",
     "techStackTitle": "Tech Stack",
@@ -101,13 +102,63 @@
   "projects": {
     "list": [
       {
+        "id": "vortex-project",
+        "title": "Vortex Project",
+        "description": "Provides technology enthusiasts and students with the opportunity to share their ideas.",
+        "image": [
+          "/images/projects/vortex_project/vortex-banner.png",
+          "/images/projects/vortex_project/vortex-landing-page.png",
+          "/images/projects/vortex_project/vortex-login.png"
+        ],
+        "stack": ["Next.js", "Django", "DRF", "Personal Project"],
+        "full_stack": [
+          "React",
+          "TypeScript",
+          "Next.js",
+          "Python",
+          "Django",
+          "DRF",
+          "Tailwind",
+          "GitHub OAuth2"
+        ],
+        "functionalities": [
+          {
+            "title": "Secure login via GitHub OAuth2",
+            "description": "Secure authentication using GitHub OAuth2, with session management and permission control.",
+            "icon": "FaGithub"
+          },
+          {
+            "title": "Share ideas with like-minded developers",
+            "description": "Publish and interact with projects and technical content within a development-focused community.",
+            "icon": "FaUsers"
+          },
+          {
+            "title": "Security first!",
+            "description": "Backend structured with data validation, token-based authentication, and user-level access control.",
+            "icon": "FaLock"
+          },
+          {
+            "title": "Responsive across all devices",
+            "description": "Access Vortex from anywhere — whether on your desktop or mobile device.",
+            "icon": "FaMobileAlt"
+          }
+        ],
+        "github": null,
+        "documentation": null,
+        "linkedin": null,
+        "isDeveloping": true,
+        "developingDescription": "Vortex is under active development, with a strong focus on security, stability, and scalability. As a social platform that handles authentication and user management, the codebase is proprietary, as expected for applications of this nature. Our priority is to build a solid and secure foundation before expanding access.",
+        "fullDescription": "Vortex is a collaborative web platform designed for developers and technology students. The application was built using Django and Django REST Framework on the backend, and Next.js with TypeScript on the frontend, applying clean architecture principles, separation of concerns, and secure authentication via GitHub OAuth2. The project aims to demonstrate full stack competencies, including REST API modeling, permission control, server-side rendering (SSR), and best practices in organization and scalability.",
+        "featured": true
+      },
+      {
         "id": "morpheus-env",
         "title": "Morpheus Env",
         "description": "Academic project focused on security practices and educational tools.",
         "image": [
-          "/images/projects/homemorpheus.png",
-          "/images/projects/morpheus_conversor.png",
-          "/images/projects/morpheus_moni.png"
+          "/images/projects/morpheus_env/homemorpheus.png",
+          "/images/projects/morpheus_env/morpheus_conversor.png",
+          "/images/projects/morpheus_env/morpheus_moni.png"
         ],
         "stack": ["Django", "DRF", "Generative AI", "Academic Project"],
         "full_stack": [
@@ -158,13 +209,13 @@
         "documentation": "https://eukauacavalcante.github.io/morpheus_env",
         "linkedin": "https://www.linkedin.com/posts/eukauacavalcante_morpheus-env-activity-7398835065323036672-TlVp?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFr0KQYBUJ81NR6ISP4zvPqbNN1uCX0fRZg",
         "fullDescription": "Morpheus Env is a web simulator that provides educational tools for analyzing computing systems. The project was developed for experimental and academic purposes, focused on research, learning, and concept demonstration.",
-        "featured": true
+        "featured": false
       },
       {
         "id": "cars-project",
         "title": "Car Dealership",
         "description": "Automobile dealership management platform with internal administration and generative AI.",
-        "image": ["/images/projects/cars_project.png"],
+        "image": ["/images/projects/cars_project/cars_project.png"],
         "stack": ["Django", "Generative AI"],
         "full_stack": ["Python", "Django", "Groq AI", "SQLite", "TailwindCSS"],
         "functionalities": [

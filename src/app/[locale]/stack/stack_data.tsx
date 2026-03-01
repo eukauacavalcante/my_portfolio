@@ -1,25 +1,27 @@
 export const stack_data = {
-  frontend: [
-    { name: "HTML5", icon: "FaHtml5" },
-    { name: "CSS3", icon: "FaCss3Alt" },
-    { name: "JavaScript", icon: "FaJsSquare" },
-    { name: "TypeScript", icon: "SiTypescript" },
+  frameworks: [
     { name: "Next.js", icon: "SiNextdotjs" },
+    { name: "Spring Boot", icon: "SiSpringboot" },
+    { name: "Django", icon: "SiDjango" },
+    { name: "DRF", icon: "SiDjango" },
+    { name: "FastAPI", icon: "SiFastapi" },
     { name: "TailwindCSS", icon: "SiTailwindcss" },
   ],
-  backend: [
+  languages: [
+    { name: "TypeScript", icon: "SiTypescript" },
+    { name: "JavaScript", icon: "FaJsSquare" },
     { name: "Python", icon: "FaPython" },
-    { name: "Django", icon: "SiDjango" },
-    { name: "DRF", icon: "bi bi-filetype-py" },
-    { name: "FastAPI", icon: "SiFastapi" },
-    { name: "PostgreSQL", icon: "SiPostgresql" },
+    { name: "Java", icon: "FaJava" },
+    { name: "HTML5", icon: "FaHtml5" },
+    { name: "CSS3", icon: "FaCss3Alt" },
   ],
   devops: [
-    { name: "Git & GitHub", icon: "FaGithub" },
     { name: "Docker", icon: "FaDocker" },
+    { name: "PostgreSQL", icon: "SiPostgresql" },
+    { name: "Git & GitHub", icon: "FaGithub" },
+    { name: "Linux", icon: "FaLinux" },
     { name: "Postman", icon: "SiPostman" },
     { name: "VS Code", icon: "SiVisualstudiocode" },
-    { name: "Linux", icon: "FaLinux" },
   ],
 };
 

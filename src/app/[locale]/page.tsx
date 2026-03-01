@@ -74,6 +74,7 @@ export default async function Home() {
                 alt={t("name")}
                 width={192}
                 height={192}
+                quality={80}
                 className="relative w-48 md:w-full max-w-sm mx-auto rounded-full object-cover ring-2 ring-chart-1 shadow-2xl group-hover:shadow-chart-1/40 transition duration-500"
               />
             </div>

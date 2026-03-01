@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
-import { defaultLocale } from "@/i18n";
+import { defaultLocale } from "@/i18n/i18n";
 
 interface DetailPageProps {
   params: { id: string };

@@ -1,4 +1,4 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/Separator";
 import PageButton from "@/components/ui/PageButton";
 import { getLocale, getTranslations } from "next-intl/server";
 

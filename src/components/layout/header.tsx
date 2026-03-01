@@ -1,6 +1,6 @@
 import PageButton from "@/components/ui/PageButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
-import { MenuSheet } from "@/components/ui/app-sidebar";
+import { MenuSheet } from "@/components/ui/AppSidebar";
 import { FaLinkedin } from "react-icons/fa";
 import { getLocale, getTranslations } from "next-intl/server";
 import LanguageSwitcher from "@/app/[locale]/components/LanguageSwitcher";

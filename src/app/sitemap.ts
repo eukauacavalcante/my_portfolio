@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { locales } from "@/i18n";
+import { locales } from "@/i18n/i18n";
 
 const baseUrl = "https://kauacavalcante.vercel.app";
 const projectIds = [

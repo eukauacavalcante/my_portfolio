@@ -1,7 +1,7 @@
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/Separator";
 import PageButton from "@/components/ui/PageButton";
 import { getTranslations } from "next-intl/server";
-import { defaultLocale } from "@/i18n";
+import { defaultLocale } from "@/i18n/i18n";
 import "../styles/globals.css";
 
 export default async function NotFound() {

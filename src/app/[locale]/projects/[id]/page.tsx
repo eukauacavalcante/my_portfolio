@@ -2,7 +2,7 @@ import { StackProject } from "@/components/ui/StackProject";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
-import { Separator } from "@/components/ui/separator";
+import { Separator } from "@/components/ui/Separator";
 import PageButton from "@/components/ui/PageButton";
 import { CarouselPlugin } from "@/components/ui/CustomCarousel";
 import {
@@ -12,7 +12,7 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+} from "@/components/ui/Breadcrumb";
 import { FadeIn } from "@/components/ui/FadeIn";
 import * as FaIcons from "react-icons/fa";
 import { Camera } from "lucide-react";
@@ -151,6 +151,28 @@ export default async function DetailPage({ params }: DetailPageProps) {
           </div>
         )}
 
+        {project.isDeveloping && (
+          <div className="relative bg-card border border-chart-1/30 rounded-xl p-6 sm:p-8 shadow-lg shadow-chart-1/10 cursor-default">
+            <div className="flex items-start gap-4 sm:gap-6">
+              <div className="shrink-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-chart-1/10 flex items-center justify-center border border-chart-1/30">
+                  <FaIcons.FaCode className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
+                </div>
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center gap-2 mb-3">
+                  <h2 className="text-lg sm:text-xl font-semibold text-foreground">
+                    {t("developingTitle")}
+                  </h2>
+                </div>
+                <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                  {project.developingDescription}
+                </p>
+              </div>
+            </div>
+          </div>
+        )}
+
         {project.functionalities && project.functionalities.length > 0 && (
           <div className="mt-12">
             <div className="mb-8">
@@ -162,7 +184,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
                 {t("mainFeaturesSubtitle")}
               </p>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 auto-rows-fr">
+            <div className="grid md:grid-cols-2 gap-6 auto-rows-fr cursor-default">
               {project.functionalities.map((func, index) => {
                 const IconComponent =
                   (FaIcons as any)[func.icon] || FaIcons.FaCode;
@@ -203,7 +225,7 @@ export default async function DetailPage({ params }: DetailPageProps) {
                 {t("techStackSubtitle")}
               </p>
             </div>
-            <div className="relative border border-border/50 rounded-2xl p-6 sm:p-8 bg-linear-to-br from-secondary/80 via-background to-secondary/80 overflow-hidden">
+            <div className="relative border border-border/50 rounded-2xl p-6 sm:p-8 bg-linear-to-br from-secondary/80 via-background to-secondary/80 overflow-hidden cursor-default">
               <div className="relative grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
                 {project.full_stack.map((tech) => (
                   <div

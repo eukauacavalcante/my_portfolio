@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
-import { Spinner } from "@/components/ui/spinner";
+import { Button } from "@/components/ui/Button";
+import { Spinner } from "@/components/ui/Spinner";
 import { getTranslations } from "next-intl/server";
 
 export default async function Loading() {

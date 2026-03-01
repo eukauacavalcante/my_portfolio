@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import type { Locale } from "@/i18n";
+import type { Locale } from "@/i18n/i18n";
 
 export interface ProjectFunctionality {
   title: string;
@@ -18,6 +18,8 @@ export interface ProjectData {
   github: string | null;
   documentation: string | null;
   linkedin: string | null;
+  isDeveloping: boolean;
+  developingDescription: string | null,
   fullDescription?: string;
   featured?: boolean;
 }
