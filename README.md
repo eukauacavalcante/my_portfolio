@@ -2,16 +2,12 @@
 
 # Portfólio Pessoal
 
-![Status](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue)
+![Status](https://img.shields.io/badge/Status-Concluído-darkgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-16.1.1-white?logo=next.js)
-
-**Portfólio Full Stack Developer**
-
-[Acesse o portfólio clicando aqui](https://kauacavalcante.vercel.app)
 
 Meu portfólio pessoal moderno e responsivo que apresenta minhas habilidades como desenvolvedor full stack, projetos e stack tecnológica de forma intuitiva e acessível.
 
-> **Próxima versão:** O portfólio será reconstruído em Astro, framework que oferece melhor performance para sites estáticos através de arquitetura orientada a conteúdo.
+> **Versão 2.0:** O portfólio foi reconstruído em Astro, framework que oferece melhor performance para sites estáticos através de arquitetura orientada a conteúdo. Acesse em [kauacavalcante.vercel.app](https://kauacavalcante.vercel.app).
 
 </div>
 
